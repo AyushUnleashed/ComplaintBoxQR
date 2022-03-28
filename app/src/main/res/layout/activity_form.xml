@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity">
+
+    <TextView
+        android:id="@+id/tvComplaintAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/robotomedium"
+        android:text="Complaint is About ,"
+        android:textColor="@color/material_blue_500"
+
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/etvEnterTitle"-->
+<!--            android:layout_width="342dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Enter Title"-->
+<!--            android:textColorHint="@color/gray"-->
+<!--            android:gravity="top"-->
+<!--            android:padding="@dimen/_10sdp"-->
+<!--            android:textAlignment="gravity"-->
+<!--            android:background="@drawable/custom_input"-->
+<!--            android:textColor="@color/black"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/etvEnterDescription"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/tvComplaintDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:fontFamily="@font/robotomedium"
+        android:padding="5dp"
+        android:text="Details:"
+        android:textColor="@color/material_blue_500"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/etvEnterDescription"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/etvEnterDescription"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Provide More Information."
+        android:inputType="textMultiLine"
+        android:padding="@dimen/_10sdp"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddForm"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/black"
+        android:text="Submit"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rbGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvComplaintAbout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp">
+
+        <RadioButton
+            android:id="@+id/rbFacility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Facilitiy Cleanliness"
+            android:fontFamily="@font/robotomedium"
+            android:textSize="16sp"/>
+        <RadioButton
+            android:id="@+id/rbRudeBehaviour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rude Behaviour"
+            android:fontFamily="@font/robotomedium"
+            android:textSize="16sp"
+            />
+        <RadioButton
+            android:id="@+id/rbFoodQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Food Quality"
+            android:fontFamily="@font/robotomedium"
+            android:textSize="16sp"/>
+        <RadioButton
+            android:id="@+id/rbHighPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="High Price"
+            android:fontFamily="@font/robotomedium"
+            android:textSize="16sp"/>
+        <RadioButton
+            android:id="@+id/rbOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:fontFamily="@font/robotomedium"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

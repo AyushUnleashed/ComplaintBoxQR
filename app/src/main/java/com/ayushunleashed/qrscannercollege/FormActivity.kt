@@ -29,7 +29,7 @@ class FormActivity : AppCompatActivity() {
             if(rb!=null)
             {
                 complaintType = rb.text.toString();
-                Toast.makeText(this, rb.text.toString(),Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, rb.text.toString(),Toast.LENGTH_SHORT).show()
             }
             else
             {

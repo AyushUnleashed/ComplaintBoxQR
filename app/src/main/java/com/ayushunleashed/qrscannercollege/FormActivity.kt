@@ -11,6 +11,7 @@ import com.ayushunleashed.qrscannercollege.models.FormModel
 import com.budiyev.android.codescanner.CodeScanner
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_form.*
+import org.json.JSONObject.NULL
 
 class FormActivity : AppCompatActivity() {
 
@@ -45,7 +46,11 @@ class FormActivity : AppCompatActivity() {
     fun addForms() {
 
         //val title = etvEnterTitle.text.toString()
-        val description = etvEnterDescription.text.toString()
+        var description = etvEnterDescription.text.toString()
+        if(description==NULL)
+        {
+            description=""
+        }
         val form = FormModel(QRScanOutput,complaintType,description)
 
             formsCollection.add(form).addOnSuccessListener {
@@ -53,7 +58,7 @@ class FormActivity : AppCompatActivity() {
             }.addOnFailureListener {
                 Toast.makeText(this, "Failed to send feedback Form", Toast.LENGTH_SHORT).show()
             }
-        
+
             val intent = Intent(this,AddAnotherForm::class.java)
             startActivity(intent)
     }

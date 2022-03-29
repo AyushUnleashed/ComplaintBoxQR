@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
+import android.widget.Button
 import android.widget.RadioButton
 import android.widget.Toast
 import com.ayushunleashed.qrscannercollege.daos.FormDao
@@ -24,17 +26,18 @@ class FormActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form)
 
+        complaintType = "Other"
+        rbGroup.check(rbOther.id)
         rbGroup.setOnCheckedChangeListener { radioGroup, i ->
             var rb = findViewById<RadioButton>(i)
 
             if(rb!=null)
             {
                 complaintType = rb.text.toString();
-                //Toast.makeText(this, rb.text.toString(),Toast.LENGTH_SHORT).show()
             }
             else
             {
-               complaintType = "Other"
+                complaintType = "Other"
             }
         }
 
@@ -44,6 +47,7 @@ class FormActivity : AppCompatActivity() {
     }
 
     fun addForms() {
+       //Toast.makeText(this,"Yogi add form is called",Toast.LENGTH_SHORT).show()
 
         //val title = etvEnterTitle.text.toString()
         var description = etvEnterDescription.text.toString()
@@ -53,13 +57,18 @@ class FormActivity : AppCompatActivity() {
         }
         val form = FormModel(QRScanOutput,complaintType,description)
 
+
             formsCollection.add(form).addOnSuccessListener {
                 Toast.makeText(this, "Feedback Added", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, AddAnotherForm::class.java)
+                startActivity(intent)
             }.addOnFailureListener {
                 Toast.makeText(this, "Failed to send feedback Form", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, AddAnotherForm::class.java)
+                startActivity(intent)
             }
 
-            val intent = Intent(this,AddAnotherForm::class.java)
-            startActivity(intent)
     }
 }

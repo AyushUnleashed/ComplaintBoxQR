@@ -112,7 +112,8 @@
             android:layout_height="wrap_content"
             android:text="Facilitiy Cleanliness"
             android:fontFamily="@font/robotomedium"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:buttonTint="#FF725E"/>
         <RadioButton
             android:id="@+id/rbRudeBehaviour"
             android:layout_width="match_parent"
@@ -120,6 +121,7 @@
             android:text="Rude Behaviour"
             android:fontFamily="@font/robotomedium"
             android:textSize="16sp"
+            android:buttonTint="#FF725E"
             />
         <RadioButton
             android:id="@+id/rbFoodQuality"
@@ -127,21 +129,24 @@
             android:layout_height="wrap_content"
             android:text="Food Quality"
             android:fontFamily="@font/robotomedium"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:buttonTint="#FF725E"/>
         <RadioButton
             android:id="@+id/rbHighPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="High Price"
             android:fontFamily="@font/robotomedium"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:buttonTint="#FF725E"/>
         <RadioButton
             android:id="@+id/rbOther"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Other"
             android:fontFamily="@font/robotomedium"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:buttonTint="#FF725E"/>
     </RadioGroup>
 
 

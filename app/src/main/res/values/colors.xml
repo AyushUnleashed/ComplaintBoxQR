@@ -6,12 +6,17 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white1">#FFFFFFFF</color>
+    <color name="white">#F5F4F2</color>
     <color name="gray">#989898</color>
 
     <!-- Material Design Color palette from : http://www.google.com/design/spec/style/color.html or http://www.materialui.co/colors -->
     <!-- Blue -->
-    <color name="material_blue_500">#2196F3</color>
+    <color name="material_blue_800">#FF725E</color>
+    <color name="material_blue_500">#FF725E</color>
+
+
+    <color name="material_blue_5001">#2196F3</color>
     <color name="material_blue_50">#E3F2FD</color>
     <color name="material_blue_100">#BBDEFB</color>
     <color name="material_blue_200">#90CAF9</color>
@@ -19,7 +24,7 @@
     <color name="material_blue_400">#42A5F5</color>
     <color name="material_blue_600">#1E88E5</color>
     <color name="material_blue_700">#1976D2</color>
-    <color name="material_blue_800">#1565C0</color>
+    <color name="material_blue_800_1">#1565C0</color>
     <color name="material_blue_900">#0D47A1</color>
     <color name="material_blue_A100">#82B1FF</color>
     <color name="material_blue_A200">#448AFF</color>

@@ -46,20 +46,15 @@ class FormActivity : AppCompatActivity() {
 
         //val title = etvEnterTitle.text.toString()
         val description = etvEnterDescription.text.toString()
-        val form = FormModel(complaintType, description)
-        if (complaintType.isEmpty() || description.isEmpty()) {
-            Toast.makeText(this, "All Fields are required", Toast.LENGTH_SHORT).show();
-        } else {
+        val form = FormModel(QRScanOutput,complaintType,description)
+
             formsCollection.add(form).addOnSuccessListener {
                 Toast.makeText(this, "Feedback Added", Toast.LENGTH_SHORT).show()
-
-                val intent = Intent(this,AddAnotherForm::class.java)
-                startActivity(intent)
             }.addOnFailureListener {
                 Toast.makeText(this, "Failed to send feedback Form", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this,AddAnotherForm::class.java)
-                startActivity(intent)
             }
-        }
+        
+            val intent = Intent(this,AddAnotherForm::class.java)
+            startActivity(intent)
     }
 }

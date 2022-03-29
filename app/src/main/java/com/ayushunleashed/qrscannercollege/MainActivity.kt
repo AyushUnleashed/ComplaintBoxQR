@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 private const val CAMERA_RQ = 101
+var QRScanOutput:String = ""
 
 class MainActivity : AppCompatActivity() {
     private lateinit var codeScanner: CodeScanner
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         // Callbacks
         codeScanner.decodeCallback = DecodeCallback {
             runOnUiThread {
+                    QRScanOutput=it.text
                     Log.d("CHECK",it.text)
                     //Toast.makeText(this, "Scan result: ${it.text}", Toast.LENGTH_LONG).show()
 
